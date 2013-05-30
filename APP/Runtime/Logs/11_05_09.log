@@ -1,0 +1,17 @@
+[ 2011-05-09T09:04:23+08:00 ] 127.0.0.4 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.020682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020893s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.026405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026608s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.004273s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.009767s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.002181s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.002031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018604s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.009082s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009183s ]
+
