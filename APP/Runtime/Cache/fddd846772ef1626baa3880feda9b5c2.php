@@ -4,14 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html" charset="utf8">
 </head>
 <body>
-	<form action="__URL__/insert" method="post">
+	<form action="form.php" method="post" enctype="multipart/form-data">
 	<table>
 		<tr>
 			<td>用户名：</td><td><input type="text" name="username" size=10></td>
 		</tr>
-<!--
 		<tr>
-			<td>性  别：</td>
+			<td>性  别：</td> 
 			<td>
 			<input type="radio" name="sex" value="0" checked>女
 			<input type="radio" name="sex" value="1">男
@@ -30,17 +29,15 @@
 			</select>
 			</td>
 		</tr>
-
 		<tr>
 			<td>爱  好：</td>
 			<td>
 			<input type="checkbox" name="hobby[]">玩游戏
 			<input type="checkbox" name="hobby[]">上  网
-			<input type="checkbox" name="hobby[]">看  书
+			<input type="checkbox" name="hobby[]">看  书 
 			<input type="checkbox" name="hobby[]">爬  山
 			</td>
 		</tr>
--->
 		<tr>
 			<td>个性签名：</td>
 			<td>
