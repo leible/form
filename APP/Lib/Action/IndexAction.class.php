@@ -7,6 +7,7 @@ class IndexAction extends Action {
     public function index() {
         $user=M("user");
         $userList=$user->select();
+        $this->assign("userList",$userlist);
         $this->display();
     }
     //添加信息界面
@@ -15,9 +16,11 @@ class IndexAction extends Action {
     }
     //添加信息
     public function insert(){
+        $hobby=$_POST["hobby[]"];
+        $data = serialize($hobby);
         $user=M("user");
         if($vo=$user->create()){
-            $AddList=$user->add();
+            $AddList=$user->add($data);
             if($AddList!==false){
                 $this->success('数据插入成功');
             }else{
