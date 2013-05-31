@@ -16,10 +16,21 @@ class IndexAction extends Action {
     }
     //添加信息
     public function insert(){
-        $hobby=$_POST["hobby[]"];
-        $data = serialize($hobby);
+        $username = $_POST['username'];
+        $sex = $_POST['sex'];
+        $area = $_POST['area'];
+        $hobby= serialize($_POST["hobby"]);
+        $message = $_POST['message'];
+
+        $data = array(
+            'username' => $username,
+            'sex' => $sex,
+            'area' => $area,
+            'hobby' => $hobby,
+            'message' => $message
+        );
         $user=M("user");
-        if($vo=$user->create()){
+        if($data){
             $AddList=$user->add($data);
             if($AddList!==false){
                 $this->success('数据插入成功');
