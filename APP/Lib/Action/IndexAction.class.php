@@ -7,7 +7,10 @@ class IndexAction extends Action {
     public function index() {
         $user = M("user");
         $userList = $user->select();
-        $this->assign("userList", $userList);
+//        dump($userList);
+        $hello = 'hello world';
+        $this->assign("list",$userList);
+        $this->assign('hello',$hello);
         $this->display();
     }
 
@@ -23,7 +26,6 @@ class IndexAction extends Action {
         $area = $_POST['area'];
         $hobby = serialize($_POST["hobby"]);
         $message = $_POST['message'];
-
         $data = array(
             'username' => $username,
             'sex' => $sex,
@@ -45,7 +47,8 @@ class IndexAction extends Action {
     }
 
     //修改信息界面
-    public function edit($id) {
+    public function edit() {
+        $id = $_GET['id'];
         if (!empty($id)) {
             $user = M("user");
             $vo = $user->getById($id);
