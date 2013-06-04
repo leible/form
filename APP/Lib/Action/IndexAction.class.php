@@ -5,12 +5,6 @@ class IndexAction extends Action {
 
     //查询数据
     public function index() {
-        $user = M("user");
-        $userList = $user->select();
-//        dump($userList);
-        $hello = 'hello world';
-        $this->assign("list",$userList);
-        $this->assign('hello',$hello);
         $this->display();
     }
 
@@ -21,15 +15,19 @@ class IndexAction extends Action {
 
     //添加信息
     public function insert() {
+        $area = $_POST['area'];
         $username = $_POST['username'];
         $sex = $_POST['sex'];
-        $area = $_POST['area'];
+        $tel = $_POST['tel'];
+        $dress = $_POST['dress'];
         $hobby = serialize($_POST["hobby"]);
         $message = $_POST['message'];
         $data = array(
+            'area' => $area,
             'username' => $username,
             'sex' => $sex,
-            'area' => $area,
+            'tel'=>$tel,
+            'dress'=>$dress,
             'hobby' => $hobby,
             'message' => $message
         );
